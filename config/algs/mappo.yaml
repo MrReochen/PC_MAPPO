@@ -1,0 +1,12 @@
+algorithm_name: "mappo"
+policy: "mappo"
+
+ppo_epoch: 5
+num_mini_batch: 1
+data_chunk_length: 10
+value_loss_coef: 1
+entropy_coef: 0.01
+huber_delta: 10.0
+use_huber_loss: True
+
+gain: 0.01

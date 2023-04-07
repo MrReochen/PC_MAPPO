@@ -1,0 +1,19 @@
+experiment_name: "DEBUG"
+model_dir: ""
+
+# These 2 items should be contrary
+use_popart: False
+use_valuenorm: True
+
+files:
+  algorithm: "algorithms/mappo.py"
+  alg_config: "config/algs/mappo.yaml"
+  envs_config: "config/envs/mappo_sc2.yaml"
+  runs_config: "config/runs/mappo.yaml"
+  actor_network: "networks/r_actor.py"
+  critic_network: "networks/r_critic.py"
+  policy: "policies/mappo.py"
+  runner: "runner/smac_runner.py"
+
+use_state_agent: False #这里取False，直接返回state，取True有额外信息
+map_name: "3s5z_vs_3s6z"

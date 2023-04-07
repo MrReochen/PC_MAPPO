@@ -1,0 +1,26 @@
+experiment_name: "PC_MAPPO"
+model_dir: ""
+
+# These 2 items should be contrary
+use_popart: False
+use_valuenorm: True
+
+files:
+  algorithm: "algorithms/pc_mappo.py"
+  alg_config: "config/algs/pc_mappo.yaml"
+  envs_config: "config/envs/mappo_sc2.yaml"
+  runs_config: "config/runs/pc_mappo.yaml"
+  actor_network: "networks/r_actor.py"
+  critic_network: "networks/r_critic.py"
+  predictor_network: "networks/predictor.py"
+  policy: "policies/pc_mappo.py"
+  runner: "runner/smac_runner_expand.py"
+
+adaptive_t: True
+t_predict: !!float 1
+input_obfuscator_dim: 0
+predict_dim: 64
+share_obs_type: "none"
+predictor_path: ""
+use_state_agent: False #这里取False，直接返回state，取True有额外信息
+map_name: "3s5z_vs_3s6z"

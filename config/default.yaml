@@ -1,0 +1,52 @@
+cuda: True
+use_eval: True
+n_training_threads: 127
+cuda_deterministic: True
+code_backup: True
+
+use_centralized_V: True
+use_obs_instead_of_state: False
+
+
+env_name: "StarCraft2"
+num_env_steps: 10000000
+episode_length: 400
+
+seed: 1
+gamma: 0.99
+use_gae: True
+gae_lambda: 0.95
+n_rollout_threads: 8
+n_eval_rollout_threads: 1
+n_render_rollout_threads: 1
+save_interval: 500
+eval_interval: 25
+eval_episodes: 32
+log_interval: 5
+use_linear_lr_decay: False
+use_render: False
+
+hidden_size: 64
+layer_N: 1
+recurrent_N: 1
+use_orthogonal: True
+use_ReLU: True
+use_feature_normalization: True
+stacked_frames: 1
+lr: !!float 5e-4
+critic_lr: !!float 5e-4
+opti_eps: !!float 1e-5
+weight_decay: 0
+
+clip_param: 0.2
+use_max_grad_norm: True
+max_grad_norm: 10.0
+use_recurrent_policy: True
+use_naive_recurrent_policy: False
+use_clipped_value_loss: True
+use_huber_loss: True
+use_value_active_masks: False
+use_policy_active_masks: True
+
+use_proper_time_limits: False
+purpose: ""

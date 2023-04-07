@@ -1,0 +1,15 @@
+map_name: "MMM2"
+add_local_obs: False
+add_move_state: False
+add_visible_state: False
+add_distance_state: False
+add_xy_state: False
+add_enemy_action_state: False
+add_agent_id: False
+use_state_agent: True
+use_mustalive: True
+add_center_xy: True
+use_stacked_frames: False
+stacked_frames: 1
+use_obs_instead_of_state: False
+share_obs_type: "none"
